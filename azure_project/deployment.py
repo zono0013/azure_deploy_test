@@ -33,9 +33,10 @@ parameters = {pair.split('=')[0]: pair.split('=')[1] for pair in connection_stri
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': parameters['dbname'],
-        'HOST': parameters['host'],
-        'USER': parameters['user'],
-        'PASSWORD': parameters['password'],
+        'NAME': 'django-zono-database',
+        'HOST': 'django-zono-server.postgres.database.azure.com',
+        'USER': 'haylsfjysv',
+        'PASSWORD': 'JzI6sc72o$hUiot1',
+        'PORT': '5432',
     }
 }
