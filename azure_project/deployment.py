@@ -27,6 +27,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # Database
 
 connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
+print(connection_string)
 parameters = {pair.split('=')[0]: pair.split('=')[1] for pair in connection_string.split(';')}
 
 DATABASES = {
