@@ -29,14 +29,13 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 connection_string = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
 print(connection_string)
 parameters = {pair.split('=')[0]: pair.split('=')[1] for pair in connection_string.split(';')}
-
+print(parameters, parameters['dbname'], parameters['host'], parameters['user'], parameters['password'])
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django-zono-database',
-        'HOST': 'django-zono-server.postgres.database.azure.com',
-        'USER': 'haylsfjysv',
-        'PASSWORD': 'JzI6sc72o$hUiot1',
-        'PORT': '5432',
+        'NAME': parameters['dbname'],
+        'HOST': parameters['host'],
+        'USER': parameters['user'],
+        'PASSWORD': parameters['password'],
     }
 }
