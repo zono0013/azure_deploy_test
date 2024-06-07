@@ -38,8 +38,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django-zono-database',
         'HOST': 'django-zono-server.postgres.database.azure.com',
-        'USER': 'haylsfjysv',
-        'PASSWORD': 'JzI6sc72o$hUiot1',
+        'USER': parameters['user'],
+        'PASSWORD': parameters['password'],
         'PORT': '5432',
     }
 }
