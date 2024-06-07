@@ -36,8 +36,8 @@ print(parameters['password'])
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django-zono-database',
-        'HOST': 'django-zono-server.postgres.database.azure.com',
+        'NAME': parameters['dbname'],
+        'HOST': parameters['host'],
         'USER': parameters['user'],
         'PASSWORD': parameters['password'],
         'PORT': '5432',
